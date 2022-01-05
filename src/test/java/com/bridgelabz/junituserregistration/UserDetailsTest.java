@@ -76,4 +76,5 @@ public class UserDetailsTest {
 		boolean isValid = register.validateEmail("abc..23@gmail.com");
 		Assert.assertFalse(isValid);
 	}
+	
 }
