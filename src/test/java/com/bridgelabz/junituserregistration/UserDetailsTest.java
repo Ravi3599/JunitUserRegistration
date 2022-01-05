@@ -46,4 +46,14 @@ public class UserDetailsTest {
 		boolean isValid = register.validateEmail(".abc@gmail.com");
 		Assert.assertFalse(isValid);
 	}
+	@Test
+	public void givenPhoneNumber_When_ShouldReturnTrue() {
+		boolean isValid = register.validateEmail("917620690906");
+		Assert.assertTrue(isValid);
+	}
+	@Test
+	public void givenPhoneNumber_When_ShouldReturnFalse() {
+		boolean isValid = register.validateEmail("5654");
+		Assert.assertFalse(isValid);
+	}
 }
