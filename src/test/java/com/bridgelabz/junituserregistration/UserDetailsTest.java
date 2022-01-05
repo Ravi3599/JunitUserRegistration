@@ -42,27 +42,32 @@ public class UserDetailsTest {
 		Assert.assertTrue(isValid);
 	}
 	@Test
-	public void givenEmail_When_ShouldReturnFalse() {
+	public void givenEmail_WhenNotProper_ShouldReturnFalse() {
 		boolean isValid = register.validateEmail(".abc@gmail.com");
 		Assert.assertFalse(isValid);
 	}
 	@Test
-	public void givenPhoneNumber_When_ShouldReturnTrue() {
+	public void givenPhoneNumber_WhenProper_ShouldReturnTrue() {
 		boolean isValid = register.validateEmail("917620690906");
 		Assert.assertTrue(isValid);
 	}
 	@Test
-	public void givenPhoneNumber_When_ShouldReturnFalse() {
+	public void givenPhoneNumber_WhenNotProper_ShouldReturnFalse() {
 		boolean isValid = register.validateEmail("5654");
 		Assert.assertFalse(isValid);
 	}
 	@Test
-	public void givenPassword_When_ShouldReturnTrue() {
+	public void givenPassword_When1UpperCase_ShouldReturnTrue() {
 		boolean isValid = register.validateEmail("aBd5gd2@g");
 		Assert.assertTrue(isValid);
 	}
 	@Test
-	public void givenPassword_When_ShouldReturnFalse() {
+	public void givenPassword_WhenProper_ShouldReturnTrue() {
+		boolean isValid = register.validateEmail("aBd5gd2@g");
+		Assert.assertTrue(isValid);
+	}
+	@Test
+	public void givenPassword_WhenNotProper_ShouldReturnFalse() {
 		boolean isValid = register.validateEmail("b3@fr");
 		Assert.assertFalse(isValid);
 	}
