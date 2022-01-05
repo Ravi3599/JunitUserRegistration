@@ -23,17 +23,27 @@ public class UserDetailsTest {
 	}
 	@Test
 	public void givenLastName_WhenProper_ShouldReturnTrue() {
-		boolean isValid = register.validateFirstName("Kumar");
+		boolean isValid = register.validateLastName("Kumar");
 		Assert.assertTrue(isValid);
 	}
 	@Test
 	public void givenLastName_WhenNotProper_ShouldReturnFalse() {
-		boolean isValid = register.validateFirstName("kumar");
+		boolean isValid = register.validateLastName("kumar");
 		Assert.assertFalse(isValid);
 	}
 	@Test
 	public void givenLastName_WhenShort_ShouldReturnFalse() {
-		boolean isValid = register.validateFirstName("ku");
+		boolean isValid = register.validateLastName("ku");
+		Assert.assertFalse(isValid);
+	}
+	@Test
+	public void givenEmail_WhenProper_ShouldReturnTrue() {
+		boolean isValid = register.validateEmail("abc@gmail.com");
+		Assert.assertTrue(isValid);
+	}
+	@Test
+	public void givenEmail_When_ShouldReturnFalse() {
+		boolean isValid = register.validateEmail(".abc@gmail.com");
 		Assert.assertFalse(isValid);
 	}
 }
