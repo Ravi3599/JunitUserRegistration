@@ -15,5 +15,8 @@ import java.util.Scanner;
 			System.out.println("Enter Email: ");
 			String mail = sc.next();
 			registration.validateEmail(mail);
+			System.out.println("Enter Phone Number: ");
+			String number = sc.next();
+			registration.validatePhoneNumber(number);
 		}
 }
