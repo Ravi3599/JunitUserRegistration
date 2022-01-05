@@ -12,7 +12,6 @@ public class UserRegistration {
 			isFirstNameValid= Pattern.matches(FIRST_NAME_REGEX,firstName);
 			if(!isFirstNameValid) {
 				System.out.println("First Name is invalid...Please enter proper first name");
-				System.exit(0);
 			}
 			return Pattern.matches(FIRST_NAME_REGEX,firstName);
 		}
@@ -20,7 +19,6 @@ public class UserRegistration {
 			isLastNameValid= Pattern.matches(LAST_NAME_REGEX, lastName);
 			if(!isLastNameValid) {
 				System.out.println("Last Name is invalid...Please enter proper last name");
-				System.exit(0);
 			}
 			return Pattern.matches(LAST_NAME_REGEX, lastName);
 		}
@@ -28,7 +26,6 @@ public class UserRegistration {
 			isMailValid= Pattern.matches(EMAIL_REGEX, mail);
 			if(!isMailValid) {
 				System.out.println("E-mail is invalid...Please enter e-mail");
-				System.exit(0);
 			}
 			return Pattern.matches(EMAIL_REGEX, mail);
 		}
