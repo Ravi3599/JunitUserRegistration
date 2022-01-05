@@ -9,5 +9,8 @@ import java.util.Scanner;
 			System.out.println("Enter First-Name: ");
 			String firstName = sc.next();
 			registration.validateFirstName(firstName);
+			System.out.println("Enter First-Name: ");
+			String lastName = sc.next();
+			registration.validateLastName(lastName);
 		}
 }

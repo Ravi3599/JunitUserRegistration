@@ -4,7 +4,8 @@ import java.util.regex.*;
 
 public class UserRegistration {
 		private static final String FIRST_NAME_REGEX = "^[A-Z][a-z]{2,}";
-		static boolean isFirstNameValid;
+		private static final String LAST_NAME_REGEX = "^[A-Z][a-z]{2,}$";
+		static boolean isFirstNameValid,isLastNameValid;
 		
 		public boolean validateFirstName(String firstName) {
 			isFirstNameValid= Pattern.matches(FIRST_NAME_REGEX,firstName);
@@ -13,5 +14,13 @@ public class UserRegistration {
 				System.exit(0);
 			}
 			return Pattern.matches(FIRST_NAME_REGEX,firstName);
+		}
+		public boolean validateLastName(String lastName) {
+			isLastNameValid= Pattern.matches(LAST_NAME_REGEX, lastName);
+			if(!isLastNameValid) {
+				System.out.println("Last Name is invalid...Please enter proper last name");
+				System.exit(0);
+			}
+			return Pattern.matches(LAST_NAME_REGEX, lastName);
 		}
 }
