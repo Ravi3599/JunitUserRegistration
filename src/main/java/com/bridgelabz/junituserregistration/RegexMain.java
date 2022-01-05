@@ -12,5 +12,8 @@ import java.util.Scanner;
 			System.out.println("Enter First-Name: ");
 			String lastName = sc.next();
 			registration.validateLastName(lastName);
+			System.out.println("Enter Email: ");
+			String mail = sc.next();
+			registration.validateEmail(mail);
 		}
 }
