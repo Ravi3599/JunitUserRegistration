@@ -15,40 +15,35 @@ public class UserRegistration {
 			isFirstNameValid= Pattern.matches(FIRST_NAME_REGEX,firstName);
 			if(!isFirstNameValid) {
 				System.out.println("First Name is invalid...Please enter proper first name");
-				System.exit(0);
 			}
-			return Pattern.matches(FIRST_NAME_REGEX,firstName);
+			return isFirstNameValid;
 		}
 		public boolean validateLastName(String lastName) {
 			isLastNameValid= Pattern.matches(LAST_NAME_REGEX, lastName);
 			if(!isLastNameValid) {
 				System.out.println("Last Name is invalid...Please enter proper last name");
-				System.exit(0);
 			}
-			return Pattern.matches(LAST_NAME_REGEX, lastName);
+			return isLastNameValid;
 		}
 		public boolean validateEmail(String mail) {
 			isMailValid= Pattern.matches(EMAIL_REGEX, mail);
 			if(!isMailValid) {
 				System.out.println("E-mail is invalid...Please enter e-mail");
-				System.exit(0);
 			}
-			return Pattern.matches(EMAIL_REGEX, mail);
+			return isMailValid;
 		}
-		public boolean validatePhoneNumber(String phoneNumber) {
-			isNumberValid= Pattern.matches(PHONE_NUMBER_REGEX, phoneNumber);
+		public boolean validatePhoneNumber(String number) {
+			boolean isNumberValid= Pattern.matches(PHONE_NUMBER_REGEX, number);
 			if(!isNumberValid) {
 				System.out.println("Phone Number is invalid...Please enter proper phone-number");
-				System.exit(0);
 			}
-			return Pattern.matches(PHONE_NUMBER_REGEX, phoneNumber);
+			return isNumberValid;
 		}
 		public boolean validatePassword(String password) {
 			isPasswordValid= Pattern.matches(PASSWORD_REGEX, password);
 			if(!isPasswordValid) {
 				System.out.println("Password is invalid...Please enter proper password");
-				System.exit(0);
 			}
-			return Pattern.matches(PASSWORD_REGEX, password);
+			return isPasswordValid;
 		}
 }
