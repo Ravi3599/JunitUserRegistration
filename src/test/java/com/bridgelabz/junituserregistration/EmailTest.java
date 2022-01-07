@@ -38,12 +38,12 @@ public class EmailTest {
 											{"abc@%*.com",false},
 											{"abc.@gmail.com",false},
 											{"abc@abc@gmail.com",false},
-											{"abc@gmail.com.aa.au",false}});
+											});
 
 	
 	}
 	@Test
-	public void givenEmail_WhenProper_ShouldReturnAsPerCondition() {
+	public void givenEmail_WhenProper_ShouldReturnAsPerCondition() throws EmailException {
 		UserRegistration register = new UserRegistration();
 		boolean isValid = register.validateEmail(this.email);
 		Assert.assertEquals(this.expectedResult,isValid);
