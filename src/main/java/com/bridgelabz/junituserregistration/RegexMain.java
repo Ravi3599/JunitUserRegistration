@@ -3,7 +3,7 @@ package com.bridgelabz.junituserregistration;
 import java.util.Scanner;
 
 	public class RegexMain {
-		public static void main(String[] args) {
+		public static void main(String[] args) throws FirstNameException, LastNameException, EmailException, PhoneNumberException, PasswordException {
 			UserRegistration registration = new UserRegistration();
 			Scanner sc = new Scanner(System.in);
 			System.out.println("Enter First-Name: ");
@@ -20,7 +20,7 @@ import java.util.Scanner;
 			registration.validatePhoneNumber(number);
 			System.out.println("Enter Password: ");
 			String password = sc.next();
-			registration.validatePhoneNumber(password);
+			registration.validatePassword(password);
 			
 		}
 }
